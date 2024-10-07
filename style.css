@@ -1,0 +1,202 @@
+/* Styling form and resume sections */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 20px;
+    padding: 0;
+    /* background-color: #f3f4f7; */
+    background: linear-gradient(-45deg, #ffdfab, #ebbcff, #8bdcff, #97ffaa);
+    animation: gradientShift 15s ease infinite;
+    background-size: 400% 400%;
+    transition: background-color 0.5s ease-in-out;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Add a smooth background transition effect */
+body.dark-mode {
+    background-color: #1e1e1e;
+}
+
+form {
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 650px;
+    animation: fadeIn 0.6s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    text-align: center;
+    color: #0e1d46;
+    font-size: 2.2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    animation: zoomIn 0.8s ease;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    color: #0e1d46
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+fieldset {
+    border: 2px solid #00aaff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: #f0faff;
+    transition: all 0.3s ease;
+}
+
+fieldset:hover {
+    border-color: #0088cc;
+    transform: scale(1.02);
+}
+
+legend {
+    font-weight: bold;
+    color: #333333;
+    font-size: 1.2em;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #333333;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+input, textarea {
+    margin-top: 6px;
+    padding: 12px;
+    width: calc(100% - 2px);
+    border: 1px solid #00aaff;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #0088cc;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 136, 204, 0.4);
+}
+
+button {
+    display: block;
+    width: 100%;
+    background-color: #0e1d46;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 6px 12px rgba(0, 136, 204, 0.2);
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background-color: #0088cc;
+    box-shadow: 0 8px 16px rgba(0, 136, 204, 0.4);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+}
+
+button:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#resume-display {
+    max-width: 650px;
+    margin: auto;
+    padding: 30px;
+    border: 2px solid #00aaff;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.6s ease-in-out;
+    overflow: hidden;
+    outline: none;
+}
+
+#resume-display h2 {
+    color: #333333;
+    font-size: 1.8em;
+    font-weight: 600;
+    animation: zoomIn 0.8s ease;
+}
+
+#resume-p{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+}
+
+#shareable-link{
+    display: flex;
+    justify-content: center;
+    color: #0e1d46;
+    font-weight: 600;
+}
+
+#shareable-link:hover{
+    display: flex;
+    justify-content: center;
+    color: #00aaff;
+    font-weight: 600;
+}
